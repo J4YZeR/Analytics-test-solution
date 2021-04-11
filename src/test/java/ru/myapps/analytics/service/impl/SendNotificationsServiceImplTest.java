@@ -18,7 +18,7 @@ import java.util.Optional;
 import static org.mockito.Mockito.when;
 
 @SpringBootTest
-class SendNotificationsRestTemplateServiceImplTest {
+class SendNotificationsServiceImplTest {
 	@Autowired
 	SendNotificationsService sendNotificationsService;
 

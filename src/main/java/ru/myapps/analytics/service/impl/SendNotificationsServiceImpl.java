@@ -20,12 +20,12 @@ import java.util.Optional;
 import java.util.concurrent.atomic.AtomicReference;
 
 @Service
-public class SendNotificationsRestTemplateServiceImpl implements SendNotificationsService {
+public class SendNotificationsServiceImpl implements SendNotificationsService {
 	private final TemplateRepository templateRepository;
 	private final MessageSender messageSender;
 
-	public SendNotificationsRestTemplateServiceImpl(TemplateRepository templateRepository,
-													@Qualifier("messageSenderRestTemplate") MessageSender messageSender) {
+	public SendNotificationsServiceImpl(TemplateRepository templateRepository,
+										@Qualifier("messageSenderRestTemplate") MessageSender messageSender) {
 		this.templateRepository = templateRepository;
 		this.messageSender = messageSender;
 	}
