@@ -27,7 +27,7 @@
   "templateId": "internshipRequest1",
   "template": "Jetbrains Internship in $teamName$ team.",
   "recipients": ["https://http1bin.org/post"],
-  "valueTypes": ["teamName":"string"]
+  "valueTypes": [{"teamName":"string"}]
    }
   ```
   `valueTypes` - опциональный параметр, содержащий информацию о типе переменных.
