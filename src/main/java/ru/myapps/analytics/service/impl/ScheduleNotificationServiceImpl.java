@@ -2,10 +2,10 @@ package ru.myapps.analytics.service.impl;
 
 import org.springframework.scheduling.TaskScheduler;
 import org.springframework.stereotype.Service;
-import ru.myapps.analytics.vo.Message;
-import ru.myapps.analytics.vo.TemplateRequest;
 import ru.myapps.analytics.service.ScheduleNotificationSenderService;
 import ru.myapps.analytics.service.SendNotificationsService;
+import ru.myapps.analytics.domain.Message;
+import ru.myapps.analytics.domain.TemplateRequest;
 
 import java.time.Duration;
 import java.time.Instant;

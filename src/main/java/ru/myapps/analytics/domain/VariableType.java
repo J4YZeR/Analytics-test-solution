@@ -1,7 +1,6 @@
-package ru.myapps.analytics.entity;
+package ru.myapps.analytics.domain;
 
 import lombok.Data;
-import org.hibernate.annotations.GeneratorType;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

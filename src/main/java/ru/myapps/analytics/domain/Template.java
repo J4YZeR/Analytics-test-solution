@@ -1,4 +1,4 @@
-package ru.myapps.analytics.entity;
+package ru.myapps.analytics.domain;
 
 import lombok.Data;
 import org.hibernate.annotations.LazyCollection;

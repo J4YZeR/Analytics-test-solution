@@ -3,15 +3,15 @@ package ru.myapps.analytics.service.impl;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
-import ru.myapps.analytics.entity.VariableType;
-import ru.myapps.analytics.exception.CustomExceptionType;
-import ru.myapps.analytics.exception.ExceptionFactory;
+import ru.myapps.analytics.domain.Template;
+import ru.myapps.analytics.domain.VariableType;
+import ru.myapps.analytics.helper.exception.CustomExceptionType;
+import ru.myapps.analytics.helper.exception.ExceptionFactory;
 import ru.myapps.analytics.helper.MessageSender;
-import ru.myapps.analytics.vo.Message;
-import ru.myapps.analytics.vo.TemplateRequest;
 import ru.myapps.analytics.repository.TemplateRepository;
 import ru.myapps.analytics.service.SendNotificationsService;
-import ru.myapps.analytics.entity.Template;
+import ru.myapps.analytics.domain.Message;
+import ru.myapps.analytics.domain.TemplateRequest;
 
 import java.util.List;
 import java.util.Map;
@@ -56,7 +56,7 @@ public class SendNotificationsServiceImpl implements SendNotificationsService {
 						throw ExceptionFactory.create(CustomExceptionType.VARIABLE_NOT_MATCHES_TYPE, variable.getKey(), varType);
 					}
 				}
-				messageToSend = messageToSend.replace("$" + variable.getKey() + "$", variable.getValue() + " " + varType);
+				messageToSend = messageToSend.replace("$" + variable.getKey() + "$", variable.getValue()); // TODO было " " + varType
 			}
 		}
 		message.setMessage(messageToSend);

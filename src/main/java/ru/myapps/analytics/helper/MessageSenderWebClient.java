@@ -8,9 +8,9 @@ import org.springframework.http.MediaType;
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Mono;
-import ru.myapps.analytics.exception.CustomExceptionType;
-import ru.myapps.analytics.exception.ExceptionFactory;
-import ru.myapps.analytics.vo.Message;
+import ru.myapps.analytics.helper.exception.CustomExceptionType;
+import ru.myapps.analytics.helper.exception.ExceptionFactory;
+import ru.myapps.analytics.domain.Message;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,7 +23,7 @@ public class MessageSenderWebClient implements MessageSender {
 	public Message sendMessage(List<String> recipients, Message messageToSend) {
 		List<String> notSentMessageRecipientsList = new ArrayList<>();
 		for (String recipient : recipients) {
-			LOGGER.info("Sending message " + messageToSend.toString() + " to " + recipient + " via RestTemplate");
+			LOGGER.info("Sending message " + messageToSend.toString() + " to " + recipient + " via WebClient");
 			WebClient webClient = WebClient.builder()
 					.baseUrl(recipient)
 					.defaultHeader(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE)
@@ -45,9 +45,6 @@ public class MessageSenderWebClient implements MessageSender {
 						StringUtils.join(notSentMessageRecipientsList, ", "));
 			}
 		}
-		recipients.forEach(recipient -> {
-			LOGGER.info("Sending message " + messageToSend.toString() + " to " + recipient + " via WebClient");
-		});
 		return messageToSend;
 	}
 }

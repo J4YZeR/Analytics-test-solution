@@ -6,12 +6,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
-import ru.myapps.analytics.entity.Template;
+import ru.myapps.analytics.domain.Template;
 import ru.myapps.analytics.helper.MessageSender;
 import ru.myapps.analytics.repository.TemplateRepository;
 import ru.myapps.analytics.service.SendNotificationsService;
-import ru.myapps.analytics.vo.Message;
-import ru.myapps.analytics.vo.TemplateRequest;
+import ru.myapps.analytics.domain.Message;
+import ru.myapps.analytics.domain.TemplateRequest;
 
 import java.util.Optional;
 

@@ -1,4 +1,4 @@
-package ru.myapps.analytics.exception;
+package ru.myapps.analytics.helper.exception;
 
 import org.springframework.http.HttpStatus;
 

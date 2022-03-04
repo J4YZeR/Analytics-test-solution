@@ -11,12 +11,12 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
-import ru.myapps.analytics.dto.TemplateDTO;
+import ru.myapps.analytics.controller.dto.TemplateDTO;
 import ru.myapps.analytics.service.AddTemplateService;
 import ru.myapps.analytics.service.ScheduleNotificationSenderService;
 import ru.myapps.analytics.service.SendNotificationsService;
-import ru.myapps.analytics.vo.Message;
-import ru.myapps.analytics.vo.TemplateRequest;
+import ru.myapps.analytics.domain.Message;
+import ru.myapps.analytics.domain.TemplateRequest;
 
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;

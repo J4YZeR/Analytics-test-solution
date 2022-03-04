@@ -1,10 +1,10 @@
-package ru.myapps.analytics.mapper;
+package ru.myapps.analytics.helper;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Component;
-import ru.myapps.analytics.entity.Template;
-import ru.myapps.analytics.dto.TemplateDTO;
-import ru.myapps.analytics.entity.VariableType;
+import ru.myapps.analytics.controller.dto.TemplateDTO;
+import ru.myapps.analytics.domain.Template;
+import ru.myapps.analytics.domain.VariableType;
 
 import java.util.AbstractMap;
 import java.util.ArrayList;

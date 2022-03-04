@@ -1,11 +1,10 @@
 package ru.myapps.analytics.service.impl;
 
 import org.springframework.stereotype.Service;
-import ru.myapps.analytics.entity.Template;
-import ru.myapps.analytics.dto.TemplateDTO;
+import ru.myapps.analytics.controller.dto.TemplateDTO;
+import ru.myapps.analytics.helper.DTOTemplateMapper;
 import ru.myapps.analytics.repository.TemplateRepository;
 import ru.myapps.analytics.service.AddTemplateService;
-import ru.myapps.analytics.mapper.DTOTemplateMapper;
 
 @Service
 public class AddTemplateServiceImpl implements AddTemplateService {

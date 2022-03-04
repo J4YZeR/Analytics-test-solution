@@ -1,4 +1,4 @@
-package ru.myapps.analytics.dto;
+package ru.myapps.analytics.controller.dto;
 
 import lombok.Data;
 

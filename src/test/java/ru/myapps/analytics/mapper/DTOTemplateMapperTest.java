@@ -4,9 +4,10 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import ru.myapps.analytics.dto.TemplateDTO;
-import ru.myapps.analytics.entity.Template;
-import ru.myapps.analytics.entity.VariableType;
+import ru.myapps.analytics.controller.dto.TemplateDTO;
+import ru.myapps.analytics.domain.Template;
+import ru.myapps.analytics.domain.VariableType;
+import ru.myapps.analytics.helper.DTOTemplateMapper;
 
 import java.util.AbstractMap;
 import java.util.ArrayList;

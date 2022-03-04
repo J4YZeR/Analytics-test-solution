@@ -1,4 +1,4 @@
-package ru.myapps.analytics.vo;
+package ru.myapps.analytics.domain;
 
 import lombok.Data;
 

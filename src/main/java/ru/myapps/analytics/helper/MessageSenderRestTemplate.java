@@ -1,6 +1,5 @@
 package ru.myapps.analytics.helper;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -9,9 +8,9 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
-import ru.myapps.analytics.exception.CustomExceptionType;
-import ru.myapps.analytics.exception.ExceptionFactory;
-import ru.myapps.analytics.vo.Message;
+import ru.myapps.analytics.helper.exception.CustomExceptionType;
+import ru.myapps.analytics.helper.exception.ExceptionFactory;
+import ru.myapps.analytics.domain.Message;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,7 +26,6 @@ public class MessageSenderRestTemplate implements MessageSender {
 
 	@Override
 	public Message sendMessage(List<String> recipients, Message messageToSend) {
-		ObjectMapper objectMapper = new ObjectMapper();
 		List<String> notSentMessageRecipientsList = new ArrayList<>();
 		var headers = new HttpHeaders();
 		headers.setContentType(MediaType.APPLICATION_JSON);

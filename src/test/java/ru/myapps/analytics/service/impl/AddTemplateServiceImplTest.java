@@ -5,9 +5,9 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
-import ru.myapps.analytics.dto.TemplateDTO;
-import ru.myapps.analytics.entity.Template;
-import ru.myapps.analytics.mapper.DTOTemplateMapper;
+import ru.myapps.analytics.controller.dto.TemplateDTO;
+import ru.myapps.analytics.domain.Template;
+import ru.myapps.analytics.helper.DTOTemplateMapper;
 import ru.myapps.analytics.repository.TemplateRepository;
 import ru.myapps.analytics.service.AddTemplateService;
 

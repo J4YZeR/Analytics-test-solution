@@ -1,7 +1,6 @@
 package ru.myapps.analytics.service;
 
-import ru.myapps.analytics.entity.Template;
-import ru.myapps.analytics.dto.TemplateDTO;
+import ru.myapps.analytics.controller.dto.TemplateDTO;
 
 public interface AddTemplateService {
 	TemplateDTO addTemplate(TemplateDTO template);

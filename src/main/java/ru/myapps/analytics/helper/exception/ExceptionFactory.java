@@ -1,4 +1,4 @@
-package ru.myapps.analytics.exception;
+package ru.myapps.analytics.helper.exception;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

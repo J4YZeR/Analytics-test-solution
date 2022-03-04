@@ -1,6 +1,6 @@
 package ru.myapps.analytics.helper;
 
-import ru.myapps.analytics.vo.Message;
+import ru.myapps.analytics.domain.Message;
 
 import java.util.List;
 
